@@ -19,4 +19,5 @@ document.getElementById('downloadBtn').addEventListener('click', function () {
 
   // Remove the anchor element from the document
   document.body.removeChild(link);
+  alert("Downloading the wedding program...");
 });
