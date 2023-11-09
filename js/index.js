@@ -1,4 +1,5 @@
 document.getElementById('downloadBtn').addEventListener('click', function () {
+  alert("Download");
   // Replace 'FILE_ID' with the actual ID of your Google Drive file
   var fileID = '1LW98cWDMHlh7RHGNJWRPwFycXj7IghQD';
 
@@ -19,5 +20,4 @@ document.getElementById('downloadBtn').addEventListener('click', function () {
 
   // Remove the anchor element from the document
   document.body.removeChild(link);
-  alert("Downloading the wedding program...");
 });
