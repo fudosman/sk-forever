@@ -1,5 +1,4 @@
 document.getElementById('downloadBtn').addEventListener('click', function () {
-  alert("Download");
   // Replace 'FILE_ID' with the actual ID of your Google Drive file
   var fileID = '1LW98cWDMHlh7RHGNJWRPwFycXj7IghQD';
 
@@ -8,12 +7,14 @@ document.getElementById('downloadBtn').addEventListener('click', function () {
 
   // Set the href attribute to the direct download link
   link.href = 'https://drive.google.com/uc?id=' + fileID;
+  link.target = '_blank';
 
   // Set the download attribute to specify the filename
   link.download = 'SK_Forever_Wedding_Program.pdf';
 
   // Append the anchor element to the document
   document.body.appendChild(link);
+  alert("Downloading...");
 
   // Trigger a click event on the anchor element
   link.click();
