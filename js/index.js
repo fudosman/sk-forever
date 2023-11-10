@@ -1,24 +1,31 @@
 document.getElementById('downloadBtn').addEventListener('click', function () {
-  // Replace 'FILE_ID' with the actual ID of your Google Drive file
   var fileID = '1LW98cWDMHlh7RHGNJWRPwFycXj7IghQD';
 
-  // Create a virtual anchor element
   var link = document.createElement('a');
-
-  // Set the href attribute to the direct download link
   link.href = 'https://drive.google.com/uc?id=' + fileID;
   link.target = '_blank';
-
-  // Set the download attribute to specify the filename
   link.download = 'SK_Forever_Wedding_Program.pdf';
 
-  // Append the anchor element to the document
   document.body.appendChild(link);
-  alert("Downloading...");
-
-  // Trigger a click event on the anchor element
+  showToast('Download started. Please wait...');
+  // Hide toast after 2 seconds
+  setTimeout(function () {
+    hideToast();
+  }, 1500);
   link.click();
-
-  // Remove the anchor element from the document
   document.body.removeChild(link);
+
 });
+
+function showToast(message) {
+  var toastContainer = document.getElementById('toastContainer');
+  var toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = message;
+  toastContainer.appendChild(toast);
+}
+
+function hideToast() {
+  var toastContainer = document.getElementById('toastContainer');
+  toastContainer.innerHTML = ''; // Clear toast content
+}
