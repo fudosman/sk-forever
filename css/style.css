@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Poppins', 'Great Vibes', "sans-serif", cursive;
   display: flex;
   align-items: center;
   justify-content: center;
