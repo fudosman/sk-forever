@@ -7,12 +7,12 @@
 body {
   font-family: 'Great Vibes', cursive;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   margin: 0;
   padding: 2rem;
-  background-image: url("../media/rsz_2image-5.jpg");
+  background-image: url("../media/rsz_1image-6.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -27,18 +27,18 @@ p {
 
 /* Card Styling */
 .card {
-  font-family: 'Great Vibes', cursive;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 8% 8% 12%;
-  /* Shortened padding properties */
+  padding: 30px;
+  /* Adjusted padding for Bootstrap card styling */
   text-align: center;
   transition: border 0.3s ease-in-out;
   margin-bottom: 5rem;
-  width: 110%;
+  width: 100%;
+  /* Adjusted width to 100% for responsiveness */
   max-width: 400px;
-  min-width: 200px;
+  /* Set a maximum width for the card */
 }
 
 .card:hover {
